@@ -444,7 +444,17 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty-maven-plugin.version}</version>
             </plugin>
-
+<plugin>
+	  <groupId>org.codehaus.cargo</groupId>
+		    <artifactId>cargo-maven2-plugin</artifactId>
+			      <version>1.7.6</version>
+				        <configuration>
+						    <container>
+							          <containerId>tomcat9x</containerId>
+									        <type>embedded</type>
+											    </container>
+												      </configuration>
+											      </plugin>
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
