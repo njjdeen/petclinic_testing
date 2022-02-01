@@ -4,9 +4,7 @@
 image: maven:3-jdk-11
 
 stages:
-        -build
-        -test
-       # -deploy
+        [build, test]
 
 build-job:
         stage: build
