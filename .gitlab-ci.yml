@@ -17,9 +17,9 @@ build-job:
 test-job:
         stage: test
         script:
-                -echo "performing tests.."
-                -mvn clean test
-                -echo "testing complete"
+                - echo "performing tests.."
+                - mvn clean test
+                - echo "testing complete"
 
     
 
