@@ -4,14 +4,15 @@
 #image: maven:3-jdk-11
 
 stages:
-        ['build', 'test']
+        -build
+        -test
 
 build-job:
         stage: build
         script:
-                -echo "compiling..."
-                -mvn compile
-                -echo "compiling complete"
+                - echo "compiling..."
+                - mvn compile
+                - echo "compiling complete"
 
 test-job:
         stage: test
