@@ -20,6 +20,6 @@ test-job:
                 - echo "performing tests.."
                 - mvn clean test
                 - echo "testing complete"
-
+                - echo "succes"
     
 
