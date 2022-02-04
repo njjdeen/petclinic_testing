@@ -4,8 +4,8 @@
 #image: maven:3-jdk-11
 
 stages:
-	- build      
-	- test 
+        - build
+        - test
 
 build-job:
         stage: build
@@ -20,6 +20,3 @@ test-job:
                 - echo "performing tests.."
                 - mvn clean test
                 - echo "testing complete"
-                - echo "succes"
-    
-
