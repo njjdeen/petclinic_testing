@@ -6,6 +6,7 @@
 stages:
         - build
         - test
+        - deploy
 
 build-job:
         stage: build
@@ -20,3 +21,12 @@ test-job:
                 - echo "performing tests.."
                 - mvn clean test
                 - echo "testing complete"
+
+deploy-job:
+        stage: deploy
+        script:
+                - echo "deploying to nexus repository"
+                - mvn clean deploy
+        only:
+                - master
+                - main
