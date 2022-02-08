@@ -6,6 +6,18 @@
     <artifactId>spring-framework-petclinic</artifactId>
     <version>5.3.8</version>
 
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://127.0.0.1:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <name>Spring Framework Petclinic</name>
     <packaging>war</packaging>
     <description>A Spring Framework application based on JSP, Spring MVC, Spring Data JPA, Hibernate and JDBC</description>
@@ -454,7 +466,18 @@
 									        <type>embedded</type>
 											    </container>
 												      </configuration>
-											      </plugin>
+					
+                                                      </plugin>
+<!--         <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.6.6</version>
+            <extensions>true</extensions>
+            <configuration>
+                <serverId>nexus</serverId>
+                <nexusUrl>http://127.0.0.1:8081/repository/maven-public/</nexusUrl>
+            </configuration>
+            </plugin>   -->                                     
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
