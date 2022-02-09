@@ -2,7 +2,9 @@
 #
 
 #image: maven:3-jdk-11
-
+variables:
+        - SETTINGS_FILE : "--settings  ./settings.xml"
+        
 stages:
         - build
         - test
@@ -26,6 +28,6 @@ deploy-job:
         stage: deploy
         script:
                 - echo "deploying to nexus repository"
-                - mvn --settings ./settings.xml clean deploy 
+                - mvn $SETTINGS_FILE clean deploy 
         only:
                 - main
