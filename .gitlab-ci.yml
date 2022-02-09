@@ -1,9 +1,9 @@
-#basic pipeline that uses maven commands
+#basic shell pipeline that uses maven commands
 #
 
 #image: maven:3-jdk-11
 variables:
-        - SETTINGS_FILE: "--settings  ./settings.xml"
+        SETTINGS_FILE: "--settings  ./settings.xml"
         
 stages:
         - build
