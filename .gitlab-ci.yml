@@ -26,6 +26,6 @@ deploy-job:
         stage: deploy
         script:
                 - echo "deploying to nexus repository"
-                - mvn clean deploy
+                - mvn --settings ./settings.xml clean deploy 
         only:
                 - main
