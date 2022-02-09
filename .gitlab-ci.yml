@@ -28,6 +28,6 @@ deploy-job:
         stage: deploy
         script:
                 - echo "deploying to nexus repository"
-                - mvn $SETTINGS_FILE clean deploy 
+                - mvn clean deploy 
         only:
                 - main
