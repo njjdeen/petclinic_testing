@@ -3,7 +3,7 @@
 
 #image: maven:3-jdk-11
 variables:
-        - SETTINGS_FILE : "--settings  ./settings.xml"
+        - SETTINGS_FILE: "--settings  ./settings.xml"
         
 stages:
         - build
