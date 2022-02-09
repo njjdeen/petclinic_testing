@@ -12,7 +12,7 @@ build-job:
         stage: build
         script:
                 - echo "compiling..."
-                - mvn compile
+                - mvn compile -DskipTests
                 - echo "compiling complete"
 
 test-job:
