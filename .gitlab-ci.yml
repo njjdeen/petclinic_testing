@@ -21,3 +21,5 @@ deploy-job:
         stage: deploy
         script:
                 - mvn clean deploy
+        only:
+                - main
