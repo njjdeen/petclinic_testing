@@ -1,0 +1,23 @@
+#basic pipeline that uses docker
+
+image: maven:3.6-jdk-8
+
+stages:
+        - build
+        - test
+        - deploy
+
+build-job:
+        stage: build
+        script:
+                - mvn compile
+
+test-job:
+        stage: test
+        script:
+                - mvn clean test
+
+deploy-job:
+        stage: deploy
+        script:
+                - mvn clean deploy
