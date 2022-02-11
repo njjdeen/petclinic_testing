@@ -20,6 +20,6 @@ test-job:
 deploy-job:
         stage: deploy
         script:
-                - mvn clean deploy
+                - mvn -Drepo.login=$username -Drepo.pwd=$password clean deploy
         only:
                 - main
