@@ -1,6 +1,7 @@
-#basic pipeline that uses docker
+#basic pipeline that uses maven commands
+#
 
-image: maven:3.6-jdk-8
+#image: maven:3-jdk-11
 
 stages:
         - build
@@ -10,14 +11,22 @@ stages:
 build-job:
         stage: build
         script:
+                - echo "compiling..."
                 - mvn compile
+                - echo "compiling complete"
 
 test-job:
         stage: test
         script:
+                - echo "performing tests.."
                 - mvn clean test
+                - echo "testing complete"
 
 deploy-job:
         stage: deploy
         script:
-                - mvn -Drepo.login=admin -Drepo.pwd=DevEngineering123! clean deploy
+                - echo "deploying to nexus repository"
+                - mvn clean deploy
+        only:
+                - master
+                - main
