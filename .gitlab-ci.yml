@@ -22,6 +22,6 @@ test-job:
 deploy-job:
         stage: deploy
         script:
-                - mvn -Drepo.login=admin -Drepo.pwd=DevEngineering123! clean deploy
+                - mvn -Drepo.login=admin -Drepo.pwd=DevEngineering123! clean install
         only:
                 - main
