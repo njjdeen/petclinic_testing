@@ -26,7 +26,7 @@ deploy-job:
         stage: deploy
         script:
                 - echo "deploying to nexus repository"
-                - mvn -Drepo.login=admin -Drepo.pwd=DevEngineering123! clean deploy
+                - mvn -Drepo.login=$username -Drepo.pwd=$password clean deploy
         only:
                 - master
                 - main
