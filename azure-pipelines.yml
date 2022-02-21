@@ -1,0 +1,6 @@
+trigger:
+- '*'
+
+pool:
+  name: 'VM-agent'
+
