@@ -4,11 +4,14 @@ trigger:
 pool:
   name: 'VM-agent'
 
-<<<<<<< HEAD
 steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'package'
-=======
->>>>>>> 183840fa3dee8e8b0befcfa33ee06767a2823a44
+
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'deploy'
+    mavenOptions: '-DskipTests'
