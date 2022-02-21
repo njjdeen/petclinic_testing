@@ -1,0 +1,11 @@
+trigger:
+- '*'
+
+pool:
+  name: 'VM-agent'
+
+steps:
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'package'
