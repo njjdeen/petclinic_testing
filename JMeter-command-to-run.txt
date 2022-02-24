@@ -1,0 +1,1 @@
+sudo ./jmeter.sh -n -f -t Petclinic_loadtest.jmx -l petclinic-test-result.jtl -e -o ~/JMeter-output
