@@ -5,13 +5,8 @@ pool:
   name: 'VM-agent'
 
 steps:
-- task: Maven@3
+- task: Bash@3
   inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'package'
-
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'deploy'
-    mavenOptions: '-DskipTests'
+    targetType: filePath
+    filePath: ./JMeter-command-to-run.sh
+    
