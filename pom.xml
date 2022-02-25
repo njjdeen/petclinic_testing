@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-framework-petclinic</artifactId>
-    <version>5.3.8.5</version>
+    <version>5.3.8.4</version>
 
-<!--
+
     <distributionManagement>
         <repository>
             <id>nexus</id>
@@ -17,20 +17,7 @@
             <url>http://192.168.178.154:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
- -->
 
- <distributionManagement>
-    <repository>
-        <id>petclinic_feed</id>
-        <url>https://pkgs.dev.azure.com/nielsdeen/262607b1-12cc-48d6-89bf-a4468f6ccf6b/_packaging/petclinic_feed/maven/v1</url>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </repository>
- </distributionManagement>
 
     <name>Spring Framework Petclinic</name>
     <packaging>war</packaging>
@@ -470,18 +457,23 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty-maven-plugin.version}</version>
             </plugin>
-<plugin>
-	  <groupId>org.codehaus.cargo</groupId>
-		    <artifactId>cargo-maven2-plugin</artifactId>
-			      <version>1.7.6</version>
-				        <configuration>
-						    <container>
-							          <containerId>tomcat9x</containerId>
-									        <type>embedded</type>
-											    </container>
-												      </configuration>
+	    <plugin>
+	         <groupId>org.codehaus.cargo</groupId>
+		 <artifactId>cargo-maven2-plugin</artifactId>
+	         <version>1.7.6</version>
+	         <configuration>
+	             <container>
+		          <containerId>tomcat9x</containerId>
+			  <type>embedded</type>
+		     </container>
+	          <configuration>
+		 	<properties>
+				<cargo.servlet.port>9999</cargo.servlet.port>
+			</properties> 
+		 </configuration>
+	         </configuration>
 					
-                                                      </plugin>
+             </plugin>
 <!--         <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -598,16 +590,6 @@
             <name>Spring Milestone Repository</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
-        <repository>
-            <id>petclinic_feed</id>
-            <url>https://pkgs.dev.azure.com/nielsdeen/262607b1-12cc-48d6-89bf-a4468f6ccf6b/_packaging/petclinic_feed/maven/v1</url>
-            <releases>
-              <enabled>true</enabled>
-            </releases>
-            <snapshots>
-              <enabled>true</enabled>
-            </snapshots>
-          </repository>
     </repositories>
 
 </project>
