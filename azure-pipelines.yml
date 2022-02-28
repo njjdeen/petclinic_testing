@@ -18,4 +18,5 @@ steps:
       git config --global user.name "Niels Deen";
       git add .;
       git commit -m "added JMeter test results to repository";
+      git rebase HEAD main
       git push origin main;
