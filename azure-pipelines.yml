@@ -18,8 +18,8 @@ steps:
       git config --global user.name "Niels Deen";
       echo "CURRENT DIRECTORY:";
       pwd;
-      git checkout origin/main;
-      echo "CHECKOUT DONE";
+      echo "GIT STATUS";
+      git status;
       git add .;
       echo "ADD COMMAND DONE";
       git checkout -b "JMeter-branch"
