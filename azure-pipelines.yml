@@ -19,7 +19,7 @@ steps:
       echo "CURRENT DIRECTORY:" &&
       pwd &&
       echo "GIT STATUS" &&
-      git status &&.
+      git status &&
       git add . &&
       echo "ADD COMMAND DONE" &&
       git checkout -b "JMeter-branch" &&
