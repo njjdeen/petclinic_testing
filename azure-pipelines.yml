@@ -18,8 +18,8 @@ steps:
       git config --global user.name "Niels Deen" &&
       echo "CURRENT DIRECTORY:" &&
       pwd &&
-      echo "GIT STATUS" &&
       git add . &&
+      echo "GIT STATUS" &&
       git status &&
       git branch &&
       echo "ADD COMMAND DONE" &&
