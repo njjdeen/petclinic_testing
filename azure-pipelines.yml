@@ -25,6 +25,6 @@ steps:
       git checkout -b "JMeter-branch" &&
       git commit -m "added JMeter test results to repository" &&
       echo "COMMIT COMMAND DONE" &&
-      git remote -v &&
-      git push -u origin JMeter-branch &&
+      git remote set-url origin git@github.com:njjdeen/petclinic_testing.git   #remote ssh url
+      git push -u origin JMeter-branch && #push to remote 
       echo "PUSH DONE to JMeter branch"
