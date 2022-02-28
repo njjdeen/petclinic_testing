@@ -19,8 +19,9 @@ steps:
       echo "CURRENT DIRECTORY:" &&
       pwd &&
       echo "GIT STATUS" &&
-      git status &&
       git add . &&
+      git status &&
+      git branch &&
       echo "ADD COMMAND DONE" &&
       git checkout -b "JMeter-branch" &&
       git commit -m "added JMeter test results to repository" &&
