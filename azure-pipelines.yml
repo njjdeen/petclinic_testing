@@ -22,7 +22,7 @@ steps:
       git status;
       git add .;
       echo "ADD COMMAND DONE";
-      git checkout -b "JMeter-branch"
+      git checkout -b "JMeter-branch";
       git commit -m "added JMeter test results to repository";
       echo "COMMIT COMMAND DONE";
       git push -u origin JMeter-branch
