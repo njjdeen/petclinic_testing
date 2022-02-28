@@ -21,11 +21,10 @@ steps:
       git add . &&
       echo "GIT STATUS" &&
       git status &&
-      git branch &&
       echo "ADD COMMAND DONE" &&
       git checkout -b "JMeter-branch" &&
-      git branch &&
       git commit -m "added JMeter test results to repository" &&
       echo "COMMIT COMMAND DONE" &&
+      git remote -v &&
       git push -u origin JMeter-branch &&
       echo "PUSH DONE to JMeter branch"
