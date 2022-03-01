@@ -13,10 +13,10 @@ steps:
       echo "Removing all previous JMeter results.." &&
       pwd &&
       sudo rm -R ./loadtest/dashboard ;
-      mkdir ./loadtest/dashboard &&
+      mkdir ./loadtest/dashboard ;
       sudo rm -R ./loadtest/test_log ;
-      mkdir ./loadtest/test_log
-
+      mkdir ./loadtest/test_log ;
+      echo "Done."
 
 - task: Bash@3
   inputs:
