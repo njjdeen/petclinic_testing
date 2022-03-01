@@ -1,10 +1,12 @@
 schedules:
 - cron: "0 0,12 * * *"
-  displayName: Daily midnight build
+  displayName: Triggered every 12 hours
   branches:
     include:
     - '*'
 
+pr: none
+trigger: none
 
 pool:
   name: 'VM-agent'
