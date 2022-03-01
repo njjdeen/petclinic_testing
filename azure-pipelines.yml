@@ -1,5 +1,10 @@
-trigger:
-- none
+schedules:
+- cron: "0 0,12 * * *"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - '*'
+
 
 pool:
   name: 'VM-agent'
@@ -41,4 +46,4 @@ steps:
       echo "COMMIT COMMAND DONE" &&
       git remote set-url origin git@github.com:njjdeen/petclinic_testing.git &&
       git push -u origin JMeter-branch &&
-      echo "PUSH DONE to JMeter branch"
+      echo "PUSH DONE to JMeter branch, GO TO GITHUB AND MAKE MERGE REQUEST"
