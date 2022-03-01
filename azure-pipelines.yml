@@ -12,10 +12,10 @@ steps:
     script:
       echo "Removing all previous JMeter results.." &&
       pwd &&
-      sudo rm -R ./loadtest/dashboard &&
-      mkdir ./loadtest/dashboard &&
-      sudo rm -R ./loadtest/test_log
-      mkdir ./loadtest/test_log
+#      sudo rm -R ./loadtest/dashboard &&
+#      mkdir ./loadtest/dashboard &&
+#      sudo rm -R ./loadtest/test_log
+#      mkdir ./loadtest/test_log
 
 
 - task: Bash@3
