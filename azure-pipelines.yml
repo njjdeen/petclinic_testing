@@ -17,6 +17,7 @@ steps:
       sudo rm -R ./loadtest/test_log ;
       mkdir ./loadtest/test_log ;
       echo "Done."
+      echo "test print"
 
 - task: Bash@3
   inputs:
