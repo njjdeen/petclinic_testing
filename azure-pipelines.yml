@@ -44,7 +44,7 @@ steps:
       git status &&
       echo "ADD COMMAND DONE" &&
       git checkout -b "JMeter-branch" &&
-      git commit -m "added JMeter test results to repository" &&
+      git commit -m "[skip azurepipelines]" &&
       echo "COMMIT COMMAND DONE" &&
       git remote set-url origin git@github.com:njjdeen/petclinic_testing.git &&
       git push -u origin JMeter-branch &&
