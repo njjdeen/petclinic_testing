@@ -19,6 +19,19 @@
     </distributionManagement>
 -->
 
+<distributionManagement>
+    <repository>
+    <id>petclinic_feed</id>
+    <url>https://pkgs.dev.azure.com/nielsdeen/262607b1-12cc-48d6-89bf-a4468f6ccf6b/_packaging/petclinic_feed/maven/v1</url>
+    <releases>
+    <enabled>true</enabled>
+    </releases>
+    <snapshots>
+    <enabled>true</enabled>
+    </snapshots>
+    </repository>
+    </distributionManagement>
+
     <name>Spring Framework Petclinic</name>
     <packaging>war</packaging>
     <description>A Spring Framework application based on JSP, Spring MVC, Spring Data JPA, Hibernate and JDBC</description>
@@ -589,6 +602,16 @@
             <id>repository.spring.milestone</id>
             <name>Spring Milestone Repository</name>
             <url>https://repo.spring.io/milestone</url>
+        </repository>
+        <repository>
+            <id>petclinic_feed</id>
+            <url>https://pkgs.dev.azure.com/nielsdeen/262607b1-12cc-48d6-89bf-a4468f6ccf6b/_packaging/petclinic_feed/maven/v1</url>
+            <releases>
+            <enabled>true</enabled>
+            </releases>
+            <snapshots>
+            <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
