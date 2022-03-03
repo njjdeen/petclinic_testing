@@ -6,7 +6,7 @@
     <artifactId>spring-framework-petclinic</artifactId>
     <version>5.3.8.4</version>
 
-
+<!-- 
     <distributionManagement>
         <repository>
             <id>nexus</id>
@@ -17,7 +17,7 @@
             <url>http://192.168.178.154:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
+-->
 
     <name>Spring Framework Petclinic</name>
     <packaging>war</packaging>
