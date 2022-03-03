@@ -31,7 +31,7 @@
           <enabled>true</enabled>
         </snapshots>
       </repository>
-
+</distributionManagement>
     <name>Spring Framework Petclinic</name>
     <packaging>war</packaging>
     <description>A Spring Framework application based on JSP, Spring MVC, Spring Data JPA, Hibernate and JDBC</description>
