@@ -604,7 +604,6 @@
             <url>https://repo.spring.io/milestone</url>
         </repository>
         <repository>
-        <repository>
             <id>nielsdeen</id>
             <url>https://pkgs.dev.azure.com/nielsdeen/_packaging/nielsdeen/maven/v1</url>
             <releases>
