@@ -47,5 +47,6 @@ steps:
       git commit -m "[skip azurepipelines]" &&
       echo "COMMIT COMMAND DONE" &&
       git remote set-url origin git@github.com:njjdeen/petclinic_testing.git &&
+      git pull &&
       git push -u origin JMeter-branch &&
       echo "PUSH DONE to JMeter branch, GO TO GITHUB AND MAKE MERGE REQUEST"
